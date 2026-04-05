@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: fitpilot_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: fitpilot
+      POSTGRES_USER: fp_user
+      POSTGRES_PASSWORD: fp_pass_dev
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: fitpilot_redis
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass redis_dev
+
+volumes:
+  pg_data:
