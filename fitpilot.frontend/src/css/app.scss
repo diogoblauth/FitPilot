@@ -1,1 +1,64 @@
 // app global css in SCSS form
+// app global css in SCSS form
+.q-field--outlined .q-field__control {
+  border-radius: 12px;
+  padding: 0 12px;
+}
+
+body.body--light .bg-tertiary {
+  background-color: $tertiary;
+}
+
+body.body--dark .bg-tertiary {
+  background-color: $dark;
+}
+
+body.body--light .bg-fourth {
+  background-color: $fourth;
+}
+
+body.body--dark .bg-fourth {
+  background-color: $dark;
+}
+
+body.body--light .bg-fifth {
+  background-color: $fifth;
+}
+
+body.body--dark .bg-fifth {
+  background-color: $dark;
+}
+
+body.body--light .bg-sixth {
+  background-color: $sixth;
+}
+
+body.body--dark .bg-sixth {
+  background-color: $dark;
+}
+
+body.body--light .bg-seventh {
+  background-color: $seventh;
+}
+
+body.body--dark .bg-seventh {
+  background-color: $dark;
+}
+
+.my-notify {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
+  padding: 16px 20px !important;
+}
+
+.my-notify .q-notification__caption {
+  font-weight: 400 !important;
+  font-size: 13px;
+  color: #555555;
+}
+
+.my-notify .q-notification__message {
+  font-weight: 700;
+  font-size: 18px;
+  color: #555555;
+}
