@@ -69,6 +69,12 @@
         <CardTopAlunos :alunos="meusAlunos" class="full-height" />
       </div>
     </div>
+
+    <div class="row q-col-gutter-md q-mt-md">
+      <div class="col-12">
+        <CardAtividadesRecentes :atividades="atividades" />
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -76,4 +82,5 @@
 import CardTemplate from '../components/Cards/CardTemplate.vue'
 import CardAgendaHoje from '../components/Cards/CardAgendaHoje.vue'
 import CardTopAlunos from 'src/components/Cards/CardTopAlunos.vue';
+import CardAtividadesRecentes from 'src/components/Cards/CardAtividadesRecentes.vue';
 </script>
