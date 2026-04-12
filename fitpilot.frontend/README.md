@@ -1,40 +1,11 @@
-# FitPilot (fitpilot-frontend)
+# FitPilot
 
-FitPilot é uma plataforma SaaS para personal trainers autônomos gerenciarem alunos, treinos, evolução, agenda e financeiro em um só lugar.
+## O que é?
 
-## Install the dependencies
-```bash
-yarn
-# or
-npm install
-```
+Plataforma SaaS para personal trainers autônomos gerenciarem alunos, treinos, evolução, agenda e financeiro em um só lugar.
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+## Como rodar
 
-
-### Lint the files
-```bash
-yarn lint
-# or
-npm run lint
-```
-
-
-### Format the files
-```bash
-yarn format
-# or
-npm run format
-```
-
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+1. Verifique se o backend está rodando corretamente
+2. Baixe as dependencias com o comando `npm i`
+3. Inicie a aplicação com o comando `npm run dev`
