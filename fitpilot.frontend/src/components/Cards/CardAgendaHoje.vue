@@ -95,7 +95,7 @@ const formattedDate = computed(() => {
 
 .agenda-card__date {
   font-size: 13px;
-  color: #757575;
+  opacity: 0.5;
   font-weight: 400;
 }
 
@@ -128,7 +128,7 @@ const formattedDate = computed(() => {
 
 .agenda-item__time {
   font-size: 13px;
-  color: #757575;
+  opacity: 0.5;
   font-weight: 500;
   min-width: 38px;
   font-variant-numeric: tabular-nums;
@@ -150,7 +150,7 @@ const formattedDate = computed(() => {
 
 .agenda-item__type {
   font-size: 12px;
-  color: #757575;
+  opacity: 0.5;
   font-weight: 400;
 }
 

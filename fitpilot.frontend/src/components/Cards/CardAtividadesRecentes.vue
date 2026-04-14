@@ -138,7 +138,7 @@ function getIconColor(type) {
 
 .atividade-item__time {
   font-size: 13px;
-  color: #757575;
+  opacity: 0.5;
   font-weight: 400;
   white-space: nowrap;
   flex-shrink: 0;

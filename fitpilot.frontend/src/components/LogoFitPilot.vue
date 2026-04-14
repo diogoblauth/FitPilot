@@ -25,7 +25,7 @@ defineProps({ large: Boolean, dark: Boolean })
 .logo-icon {
   width: 32px;
   height: 32px;
-  background: #22c55e;
+  background: var(--q-primary);
   border-radius: 9px;
   display: flex;
   align-items: center;
@@ -41,7 +41,6 @@ defineProps({ large: Boolean, dark: Boolean })
 .logo-fit--light { color: #1a1a1a; }
 .logo-fit--lg   { font-size: 19px; }
 
-/* "Pilot" — sempre verde */
-.logo-pilot     { font-size: 17px; font-weight: 600; color: #22c55e; }
+.logo-pilot     { font-size: 17px; font-weight: 600; color: var(--q-primary); }
 .logo-pilot--lg { font-size: 19px; }
 </style>

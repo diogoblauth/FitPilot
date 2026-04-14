@@ -4,8 +4,8 @@
       <div class="q-gutter-sm">
         <div class="text-h5 text-bold">Bom dia, Diogo! 💪</div>
         <div
-          class="text-grey-7 text-subtitle1 text-h6"
-          style="font-weight: 400"
+          class="text-subtitle1 text-h6"
+          style="font-weight: 400; opacity: 0.5;"
         >
           Aqui está o resumo do seu dia.
         </div>

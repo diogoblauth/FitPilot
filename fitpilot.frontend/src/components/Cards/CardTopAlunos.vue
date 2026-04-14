@@ -89,7 +89,7 @@ function getInitials(name) {
 
 .top-alunos-card__subtitle {
   font-size: 13px;
-  color: #757575;
+  opacity: 0.5;
   font-weight: 400;
 }
 
@@ -145,7 +145,7 @@ function getInitials(name) {
 
 .aluno-item__streak {
   font-size: 12px;
-  color: #757575;
+  opacity: 0.5;
   font-weight: 400;
 }
 
