@@ -1,46 +1,36 @@
 <template>
-  <div class="logo-wrap">
-    <div class="logo-icon" :class="{ 'logo-icon--lg': large }">
+  <div class="row items-center no-wrap" style="gap: 10px; user-select: none">
+    <div
+      class="row items-center justify-center no-wrap bg-primary"
+      :style="{
+        width: large ? '38px' : '32px',
+        height: large ? '38px' : '32px',
+        borderRadius: large ? '11px' : '9px',
+        flexShrink: 0,
+      }"
+    >
       <Activity :size="large ? 20 : 17" color="white" stroke-width="2.2" />
     </div>
-    <div class="logo-text">
-      <span class="logo-fit" :class="{ 'logo-fit--lg': large, 'logo-fit--light': !dark }">Fit</span>
-      <span class="logo-pilot" :class="{ 'logo-pilot--lg': large }">Pilot</span>
+
+    <div style="line-height: 1; letter-spacing: -0.4px">
+      <span
+        :class="dark ? 'text-white' : 'text-dark'"
+        :style="{ fontSize: large ? '19px' : '17px', fontWeight: 600 }"
+      >
+        Fit
+      </span>
+      <span class="text-primary" :style="{ fontSize: large ? '19px' : '17px', fontWeight: 600 }"
+        >Pilot</span
+      >
     </div>
   </div>
 </template>
 
 <script setup>
 import { Activity } from 'lucide-vue-next'
-defineProps({ large: Boolean, dark: Boolean })
+
+defineProps({
+  large: Boolean,
+  dark: Boolean,
+})
 </script>
-
-<style scoped>
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  user-select: none;
-}
-.logo-icon {
-  width: 32px;
-  height: 32px;
-  background: var(--q-primary);
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.logo-icon--lg { width: 38px; height: 38px; border-radius: 11px; }
-
-.logo-text { line-height: 1; letter-spacing: -0.4px; }
-
-/* "Fit" — branco no dark, cinza escuro no light */
-.logo-fit       { font-size: 17px; font-weight: 600; color: #fff; }
-.logo-fit--light { color: #1a1a1a; }
-.logo-fit--lg   { font-size: 19px; }
-
-.logo-pilot     { font-size: 17px; font-weight: 600; color: var(--q-primary); }
-.logo-pilot--lg { font-size: 19px; }
-</style>

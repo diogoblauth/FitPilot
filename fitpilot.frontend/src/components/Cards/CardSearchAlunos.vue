@@ -1,31 +1,27 @@
 <template>
-  <div class="search-filter-row">
-    <!-- Campo de busca -->
-    <div class="search-card" :class="{ 'search-card--focused': isFocused }">
+  <div class="search-filter-row row items-center full-width">
+    <div
+      class="search-card row items-center no-wrap"
+      :class="{ 'search-card--focused': isFocused }"
+    >
       <q-icon name="search" size="18px" class="search-card__icon" />
       <input
         v-model="query"
         class="search-card__input"
         placeholder="Buscar por nome ou objetivo..."
-        @input="$emit('update:modelValue', query)"
+        @input="emit('update:modelValue', query)"
         @focus="isFocused = true"
         @blur="isFocused = false"
       />
-      <q-icon
-        v-if="query"
-        name="close"
-        size="16px"
-        class="search-card__clear"
-        @click="clear"
-      />
+      <q-icon v-if="query" name="close" size="16px" class="search-card__clear" @click="clear" />
     </div>
 
-    <!-- Filtros de status -->
-    <div class="filter-chips">
+    <div class="filter-chips row items-center no-wrap">
       <button
         v-for="filter in filters"
         :key="filter.key"
-        class="filter-chip"
+        type="button"
+        class="filter-chip row items-center no-wrap"
         :class="{ 'filter-chip--active': activeFilter === filter.key }"
         @click="setFilter(filter.key)"
       >
@@ -47,11 +43,11 @@ defineProps({
   filters: {
     type: Array,
     default: () => [
-      { key: 'todos',         label: 'Todos',         count: 8 },
-      { key: 'ativos',        label: 'Ativos',        count: 5 },
-      { key: 'pausados',      label: 'Pausados',      count: 1 },
+      { key: 'todos', label: 'Todos', count: 8 },
+      { key: 'ativos', label: 'Ativos', count: 5 },
+      { key: 'pausados', label: 'Pausados', count: 1 },
       { key: 'inadimplentes', label: 'Inadimplentes', count: 1 },
-      { key: 'inativos',      label: 'Inativos',      count: 1 },
+      { key: 'inativos', label: 'Inativos', count: 1 },
     ],
   },
 })
@@ -75,25 +71,21 @@ function setFilter(key) {
 
 <style scoped>
 .search-filter-row {
-  display: flex;
-  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  width: 100%;
 }
 
-/* ── Search ── */
 .search-card {
-  display: flex;
-  align-items: center;
   gap: 10px;
   padding: 8px 16px;
-  border-radius: 12px;
   border: 1px solid rgba(128, 128, 128, 0.2);
   background: rgba(128, 128, 128, 0.06);
-  transition: border-color 0.42s ease, background 0.2s ease;
+  transition:
+    border-color 0.42s ease,
+    background 0.2s ease;
   min-width: 400px;
   max-width: 420px;
+  border-radius: 12px;
 }
 
 .search-card:hover:not(.search-card--focused) {
@@ -102,7 +94,6 @@ function setFilter(key) {
 
 .search-card--focused {
   border-color: var(--q-primary);
-  background: rgba(128, 128, 128, 0.06);
 }
 
 .search-card__icon {
@@ -143,31 +134,27 @@ function setFilter(key) {
   opacity: 0.7;
 }
 
-/* ── Filter Chips ── */
 .filter-chips {
-  display: flex;
-  align-items: center;
   gap: 8px;
-  flex-wrap: nowrap;        /* não quebra linha */
-  overflow-x: auto;         /* scroll horizontal */
-  -webkit-overflow-scrolling: touch; /* scroll suave no iOS */
-  scrollbar-width: none;    /* esconde barra no Firefox */
-  -ms-overflow-style: none; /* esconde barra no IE/Edge */
-  min-width: 0;             /* permite encolher dentro do flex pai */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  min-width: 0;
 }
 
 .filter-chip {
-  display: inline-flex;
-  align-items: center;
   gap: 6px;
   padding: 7px 12px;
-  border-radius: 10px;
   border: 1px solid rgba(128, 128, 128, 0.2);
   background: transparent;
   color: inherit;
   cursor: pointer;
-  transition: border-color 0.2s ease, background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
   white-space: nowrap;
+  border-radius: 12px;
 }
 
 .filter-chip:hover {
@@ -182,7 +169,6 @@ function setFilter(key) {
 .filter-chip__label {
   font-size: 13px;
   font-weight: 500;
-  color: inherit;
   opacity: 0.7;
 }
 
@@ -194,7 +180,6 @@ function setFilter(key) {
 .filter-chip__count {
   font-size: 12px;
   font-weight: 600;
-  color: inherit;
   opacity: 0.45;
 }
 
@@ -206,17 +191,17 @@ function setFilter(key) {
 .filter-chips::-webkit-scrollbar {
   display: none;
 }
-/* ── Responsividade ── */
+
 @media (max-width: 1180px) {
   .search-filter-row {
     flex-direction: column;
-    align-items: stretch; /* filhos esticam para ocupar a largura total */
+    align-items: stretch;
   }
 
   .search-card {
-    min-width: unset;
-    max-width: unset;
-    width: 100%; /* mesmo tamanho da linha dos chips */
+    min-width: 0;
+    max-width: none;
+    width: 100%;
   }
 
   .filter-chips {

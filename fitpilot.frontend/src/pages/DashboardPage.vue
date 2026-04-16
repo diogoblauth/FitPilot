@@ -1,12 +1,9 @@
 <template>
   <q-page padding>
-    <div class="flex justify-between items-center">
+    <div class="row items-center justify-between">
       <div class="q-gutter-sm">
         <div class="text-h5 text-bold">Bom dia, Diogo! 💪</div>
-        <div
-          class="text-subtitle1 text-h6"
-          style="font-weight: 400; opacity: 0.5;"
-        >
+        <div class="text-subtitle1 text-h6 text-grey-6 text-weight-regular" style="opacity: 0.5">
           Aqui está o resumo do seu dia.
         </div>
       </div>
@@ -79,8 +76,8 @@
 </template>
 
 <script setup>
-import CardTemplate from '../components/Cards/CardTemplate.vue'
-import CardAgendaHoje from '../components/Cards/CardAgendaHoje.vue'
-import CardTopAlunos from 'src/components/Cards/CardTopAlunos.vue';
-import CardAtividadesRecentes from 'src/components/Cards/CardAtividadesRecentes.vue';
+import CardAgendaHoje from 'src/components/Cards/CardAgendaHoje.vue'
+import CardAtividadesRecentes from 'src/components/Cards/CardAtividadesRecentes.vue'
+import CardTemplate from 'src/components/Cards/CardTemplate.vue'
+import CardTopAlunos from 'src/components/Cards/CardTopAlunos.vue'
 </script>

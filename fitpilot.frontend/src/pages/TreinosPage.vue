@@ -1,12 +1,9 @@
 <template>
   <q-page padding>
-    <div class="flex justify-between items-center">
+    <div class="row items-center justify-between">
       <div class="q-gutter-sm">
         <div class="text-h5 text-bold">Treinos & Fichas</div>
-        <div
-          class="text-subtitle1 text-h6"
-          style="font-weight: 400; opacity: 0.5;"
-        >
+        <div class="text-subtitle1 text-h6 text-grey-6 text-weight-regular" style="opacity: 0.5">
           Gerencie fichas de treino dos seus alunos
         </div>
       </div>
