@@ -2,7 +2,7 @@
   <q-card class="metric-card full-width column" :style="cardStyle" flat bordered>
     <q-card-section class="column q-pa-none" :style="sectionStyle">
       <div class="row items-start justify-between no-wrap" style="gap: 12px">
-        <span class="text-weight-medium" :style="labelStyle">{{ label }}</span>
+        <span class="text-weight-medium text-grey-7" :style="labelStyle">{{ label }}</span>
 
         <div class="row items-center justify-center no-wrap" :style="iconBadgeStyle">
           <q-icon :name="icon" :size="iconSize" color="white" />

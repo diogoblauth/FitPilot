@@ -5,7 +5,7 @@
         <span class="text-weight-bold" style="font-size: 18px; letter-spacing: -0.01em"
           >Top Alunos</span
         >
-        <span class="text-grey-6" style="font-size: 13px; font-weight: 400; opacity: 0.5">{{
+        <span class="text-grey-7" style="font-size: 13px; font-weight: 400">{{
           subtitle
         }}</span>
       </div>
@@ -32,7 +32,7 @@
           <span class="text-weight-medium" style="font-size: 15px; line-height: 1.2">{{
             aluno.name
           }}</span>
-          <span class="text-grey-6" style="font-size: 12px; font-weight: 400; opacity: 0.5"
+          <span class="text-grey-7" style="font-size: 12px; font-weight: 400"
             >🔥 {{ aluno.streak }} dias seguidos</span
           >
         </div>

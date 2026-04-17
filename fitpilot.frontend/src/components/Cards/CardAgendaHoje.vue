@@ -4,7 +4,7 @@
       <span class="text-weight-bold" style="font-size: 18px; letter-spacing: -0.01em"
         >Agenda de Hoje</span
       >
-      <span class="text-grey-6" style="font-size: 13px; font-weight: 400; opacity: 0.5">{{
+      <span class="text-grey-7" style="font-size: 13px; font-weight: 400;">{{
         formattedDate
       }}</span>
     </q-card-section>
@@ -19,13 +19,12 @@
         :class="{ 'agenda-item--now': session.status === 'now' }"
       >
         <span
-          class="text-grey-6 text-weight-medium"
+          class="text-grey-7 text-weight-medium"
           style="
             font-size: 13px;
             min-width: 38px;
             font-variant-numeric: tabular-nums;
             letter-spacing: 0.02em;
-            opacity: 0.5;
           "
         >
           {{ session.time }}
@@ -35,7 +34,7 @@
           <span class="text-weight-medium" style="font-size: 15px; line-height: 1.2">{{
             session.name
           }}</span>
-          <span class="text-grey-6" style="font-size: 12px; font-weight: 400; opacity: 0.5">{{
+          <span class="text-grey-7" style="font-size: 12px; font-weight: 400;">{{
             session.type
           }}</span>
         </div>

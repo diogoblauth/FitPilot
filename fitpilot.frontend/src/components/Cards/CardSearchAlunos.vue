@@ -78,7 +78,7 @@ function setFilter(key) {
 .search-card {
   gap: 10px;
   padding: 8px 16px;
-  border: 1px solid rgba(128, 128, 128, 0.2);
+  border: 1px solid rgba(117, 117, 117, 0.5);
   background: rgba(128, 128, 128, 0.06);
   transition:
     border-color 0.42s ease,
@@ -89,7 +89,7 @@ function setFilter(key) {
 }
 
 .search-card:hover:not(.search-card--focused) {
-  border-color: rgba(128, 128, 128, 0.45);
+    border: 1px solid rgba(117, 117, 117, 0.8);
 }
 
 .search-card--focused {
@@ -115,10 +115,6 @@ function setFilter(key) {
 
 .search-card__input::placeholder {
   color: inherit;
-  opacity: 0.6;
-}
-
-.search-card__input:focus {
   opacity: 1;
 }
 
@@ -146,7 +142,7 @@ function setFilter(key) {
 .filter-chip {
   gap: 6px;
   padding: 7px 12px;
-  border: 1px solid rgba(128, 128, 128, 0.2);
+  border: 1px solid rgba(117, 117, 117, 0.5);
   background: transparent;
   color: inherit;
   cursor: pointer;
@@ -158,7 +154,7 @@ function setFilter(key) {
 }
 
 .filter-chip:hover {
-  border-color: rgba(128, 128, 128, 0.45);
+  border-color: rgba(117, 117, 117, 0.8);
 }
 
 .filter-chip--active {
@@ -169,7 +165,7 @@ function setFilter(key) {
 .filter-chip__label {
   font-size: 13px;
   font-weight: 500;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .filter-chip--active .filter-chip__label {
@@ -180,7 +176,7 @@ function setFilter(key) {
 .filter-chip__count {
   font-size: 12px;
   font-weight: 600;
-  opacity: 0.45;
+  opacity: 1;
 }
 
 .filter-chip--active .filter-chip__count {

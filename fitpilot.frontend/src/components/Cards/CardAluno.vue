@@ -19,7 +19,7 @@
           style="font-size: 16px; line-height: 1.2"
           >{{ aluno.name }}</span
         >
-        <span class="text-grey-6" style="font-size: 13px; font-weight: 400; opacity: 0.5">{{
+        <span class="text-grey-7" style="font-size: 13px; font-weight: 400">{{
           aluno.treino
         }}</span>
       </div>
@@ -55,7 +55,7 @@
       class="aluno-card__section--goal row items-baseline"
       style="gap: 6px; padding: 0 20px 10px"
     >
-      <span class="text-grey-6" style="font-size: 13px; font-weight: 400; opacity: 0.5"
+      <span class="text-grey-7" style="font-size: 13px; font-weight: 400"
         >Objetivo:</span
       >
       <span class="text-weight-medium" style="font-size: 14px">{{ aluno.objetivo }}</span>
@@ -78,19 +78,17 @@
       </span>
     </q-card-section>
 
-    <q-separator style="color: rgba(117, 117, 117, 0.5)" />
-
     <q-card-section
       class="aluno-card__section--contact row items-center"
       style="gap: 20px; padding: 6px 20px 12px"
     >
       <button type="button" class="aluno-card__contact-btn row items-center no-wrap">
         <q-icon name="mail_outline" size="16px" />
-        <span>E-mail</span>
+        <span class="aluno-card__contact-label">E-mail</span>
       </button>
       <button type="button" class="aluno-card__contact-btn row items-center no-wrap">
         <q-icon name="phone" size="16px" />
-        <span>WhatsApp</span>
+        <span class="aluno-card__contact-label">WhatsApp</span>
       </button>
     </q-card-section>
   </q-card>
@@ -191,16 +189,27 @@ function getAdherenceColor(value) {
   font-size: 13px;
   font-weight: 500;
   color: inherit;
-  opacity: 0.55;
   padding: 0;
+  transition: color 0.15s ease;
+}
+
+.aluno-card__contact-btn :deep(.q-icon) {
+  opacity: 0.55;
   transition:
     color 0.15s ease,
     opacity 0.15s ease;
 }
 
-.aluno-card__contact-btn:hover {
+.aluno-card__contact-label {
   opacity: 1;
+}
+
+.aluno-card__contact-btn:hover {
   color: var(--q-primary);
+}
+
+.aluno-card__contact-btn:hover :deep(.q-icon) {
+  opacity: 1;
 }
 
 @media (max-width: 480px) {

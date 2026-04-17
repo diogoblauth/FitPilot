@@ -118,7 +118,6 @@ function getIconColor(type) {
 .atividade-item__time {
   font-size: 13px;
   font-weight: 400;
-  opacity: 0.5;
 }
 
 @media (max-width: 480px) {

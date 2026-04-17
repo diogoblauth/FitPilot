@@ -223,6 +223,14 @@ function navigate(path) {
   }
 }
 
+.nav-item--dark span {
+  color: #fff;
+}
+
+.nav-item--active span {
+  color: inherit;
+}
+
 /* ── Toggle pill ── */
 .toggle-pill {
   margin-left: auto;
